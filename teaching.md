@@ -31,7 +31,7 @@ order : 4
 | Commutative Algebra |	Math 215A |	Fall 2017 |
 | Algebra	| Math 110A |	Summer 2017 |
 | Linear algebra and applications |	Math 33A |	Summer 2017 |
-| Linear Algebra	Math 115B |	Spring 2017 |
+| Linear Algebra	|Math 115B |	Spring 2017 |
 | Discrete structures	| Math 61 |	Winter 2017 |
 | Algebra |	Math 110A |	Fall 2016 |
 | Calculus for Life Sciences |	Math 3A |	Fall 2016 |
