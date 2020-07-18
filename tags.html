@@ -1,0 +1,51 @@
+---
+layout: default
+permalink: /blog/tags
+---
+<h1 style="text-align: center;" > Blog tags </h1>
+{% comment %}
+Extract and sort tags from all posts
+{% endcomment %}
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+	{% assign ttags = post.tags | join:'|' | append:'|' %}
+	{% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% comment %}
+Clean up tags, remove duplicates
+{% endcomment %}
+{% assign tags = "" %}
+{% for tag in rawtags %}
+	{% if tag != "" %}
+		{% if tags == "" %}
+			{% assign tags = tag | split:'|' %}
+		{% endif %}
+		{% unless tags contains tag %}
+			{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+		{% endunless %}
+	{% endif %}
+{% endfor %}
+
+{% comment %}
+List tags with posts associated with them
+{% endcomment %}
+{% for tag in tags %}
+	<h2 id="{{ tag | slugify }}" style="background-color: pink; text-align: center;">{{ tag }}</h2>
+
+	 {% for post in site.posts %}
+		 {% if post.tags contains tag %}
+		 <p>
+		 <h3>
+		 <a href="{{ post.url }}">
+		 {{ post.title }} </a>
+		 <span style="font-size:15px; color: gray;"> &nbsp; {{ post.date | date_to_string }} </span>
+		
+		 </h3>
+		 </p>
+		 {% endif %}
+	 {% endfor %}
+		 
+	
+{% endfor %}
