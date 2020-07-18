@@ -1,0 +1,25 @@
+--- 
+layout: page
+title : Portfolio 
+permalink: /portfolio/
+order : 2
+---
+<div class="my-flex-container">
+{% for item in site.portfolio %}
+
+  <div>
+  <figure> 
+        <a  href="{{ item.url | relative_url }}">
+          
+	  
+            
+            <img alt="" class="" src="{{ item.img | relative_url }}" style="width:180px; height:160px ; border-radius: 25%;">
+	      <figcaption>  {{ item.title }}</figcaption>
+
+        </a>
+  </figure>
+  </div>
+
+    {% endfor %}
+
+    </div>
