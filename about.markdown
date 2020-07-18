@@ -12,7 +12,7 @@ Hello there! My name is Nivedita Bhaskhar and I am a mathematician and programme
 {: style="text-align: justify"}
 
 
-I'm also interested in machine learning, data science and ed-tech. To know more about my work, check out my [research](/research_math) and [portfolio](/portfolio) pages and my expository [tech-blog](/blog).
+I'm also interested in machine learning, data science and ed-tech. To know more about my work, check out the [research](/research_math) and [portfolio](/portfolio) pages and my expository [tech-blog](/blog).
 {: style="text-align: justify"}
 
 
