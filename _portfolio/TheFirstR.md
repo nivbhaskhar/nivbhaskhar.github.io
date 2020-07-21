@@ -3,6 +3,7 @@ layout: post
 title: The First R
 img: assets/book.png
 date: 2020-06-28
+tags: [Flask, CSS, portfolio]
 ---
 
 # What is The First R ?
