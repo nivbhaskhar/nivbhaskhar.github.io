@@ -1,9 +1,8 @@
 ---
-layout: post
+layout: portfolio_post
 title: UnPuzzled
 img: "assets/puzzle.png"
 date: 2020-07-16
-tags: [ML, portfolio, deep-learning]
 ---
 
 # What is UnPuzzled ?
