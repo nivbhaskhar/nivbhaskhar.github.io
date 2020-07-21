@@ -130,7 +130,7 @@ Both the _AdjacencyClassifier_NoML_ and the _ResNetFT_ solved 87.5 % of the puzz
   </thead>
   <tbody>
     <tr>
-      <th>avg_time_taken</th>
+      <th>avg_time_taken (sec)</th>
       <td>11.2126</td>
       <td>18.9795</td>
       <td>23.0482</td>
