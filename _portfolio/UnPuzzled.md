@@ -92,6 +92,8 @@ There were 67 _six-by-six_ puzzles, 11 _five-by-five_ puzzles and 2 _four-by-fou
 </table>
 </div>
 
+We evaluated solvers based on three checking-adjacency models, namely AdjacencyClassifier_NoML_ (a hand-engineered model), _FromScratch_ (a simple CNN) and _ResNetFT_ (a fine-tuned ResNet 18 model).
+
 
 
 Both the _AdjacencyClassifier_NoML_ and the _ResNetFT_ solved 87.5 % of the puzzles completely correctly. _FromScratch_ underperformed by solving only 37.5 % of the puzzles completely correctly.
@@ -147,18 +149,22 @@ Both the _AdjacencyClassifier_NoML_ and the _ResNetFT_ solved 87.5 % of the puzz
 
 
 
-## A venn diagram to visualize the comparisons
+# A venn diagram to visualize the comparisons
+{: style="background-color: pink"}
 
 
 ![Venn diagram](/assets/SolverComparisons_61_0.png){:class="img-responsive"} 
 
 
 
-## Comments
+# Comments
+{: style="background-color: pink"}
 
-The current evaluation classified a puzzle as _unsolved_ even if the models got a major chunk right but placed it incorrectly on the board. So we further visually investigated what the models did on puzzles they did not solve completely correctly. It turned out that the solvers were putting together several chunks of the puzzles correctly even if they were not placing the pieces in the correct positions in the puzzle board. Further, the solvers sometimes put back mostly correct but rotated versions of the images. 
 
-If there are several similar pieces, and a solver chose and fit an incorrect piece, our evaluation forced this puzzle to be classified as incorrectly solved. However the solver might (and did often) recover and got local chunks of the puzzle right. Perhaps a non-binary evaluation metric would aid in gauging the efficacy of these puzzle-solvers.
+We further visually investigated what the models did on puzzles they did not solve completely correctly. It turned out that the solvers were putting together several chunks of the puzzles correctly even if they were not placing the pieces in the correct positions in the puzzle board. Further, the solvers sometimes put back mostly correct but rotated versions of the images. Our current evaluation classified all these puzzles as _unsolved_.
+
+
+If there are several similar pieces, and a solver chose and fit an incorrect piece, the puzzle of course will not be completely correctly solved. However the solver might (and did often) recover and got local chunks of the puzzle right. Perhaps a non-binary evaluation metric would aid in gauging the efficacy of these puzzle-solvers.
 
 
 
