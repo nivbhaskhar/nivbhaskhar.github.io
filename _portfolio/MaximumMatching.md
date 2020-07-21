@@ -3,6 +3,7 @@ layout: post
 title: Maximum Matching
 img: /assets/blossom.png
 date: 2020-06-17
+tags: [python, algorithms, portfolio]
 ---
 
 # An overview
