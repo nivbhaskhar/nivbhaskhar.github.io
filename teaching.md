@@ -9,16 +9,16 @@ order : 4
 ### Current courses @ USC
 {: style="text-align: center ; background-color: pink"}
 
-| Elementary number theory | M430 | Fall 2020 |
-| Statistical Inference and Data Analysis 1 | M307 | Fall 2020 |
+| Elementary number theory | Math 430 | Fall 2020 |
+| Statistical Inference and Data Analysis 1 | Math 307 | Fall 2020 |
 
 
 ### Previous courses @ USC
 {: style="text-align: center ; background-color: pink"}
 
-| Calculus 1 |    M125 (Sec 1)|	Spring 2020 |
-| Calculus 1 |    M125 (Sec 2)|	Spring 2020 |
-| Contemporary Precalculus |	M108 | Fall 2019 |
+| Calculus 1 |    Math 125 (Sec 1)|	Spring 2020 |
+| Calculus 1 |    Math 125 (Sec 2)|	Spring 2020 |
+| Contemporary Precalculus |	Math 108 | Fall 2019 |
 
 ### Previous courses @ UCLA
 {: style="text-align: center ; background-color: pink"}
