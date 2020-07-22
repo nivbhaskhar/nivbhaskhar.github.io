@@ -2,7 +2,7 @@
 layout: post
 title: "Making GIFs in Python"
 date: 2020-07-20 08:53:21 -0700
-tags: [Code-snippet, Python]
+tags: [Code-snippet,Python]
 ---
 
 If you're searching for a quick way to make GIFs out of a folder full of images, the Pillow library in Python does the trick for you!  

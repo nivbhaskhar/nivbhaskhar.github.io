@@ -12,8 +12,9 @@ layout: default
       </time>
       | Tags: 
       {% for tag in page.tags %}
-      <a href="{{site.url}}/blog/tags/#{{tag | slugify}}"> {{ tag }}, </a>
-    {% endfor %}
+      <a href="{{site.url}}/blog/tags#{{tag | slugify}}">{{tag}}</a>{% if forloop.last %}{% else %},{% endif %}
+      
+      {% endfor %}
       {%- if page.author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
       {%- endif -%}</p>

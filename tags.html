@@ -36,14 +36,16 @@ List tags with posts associated with them
 
 	 {% for post in site.posts %}
 		 {% if post.tags contains tag %}
-		 <p>
+		 <div  style="text-align: center">
+                 <div style="display: inline-block">
 		 <h3>
-		 <a href="{{ post.url }}">
+		 <a href="{{ post.url }}" style="text-align:center">
 		 {{ post.title }} </a>
 		 <span style="font-size:15px; color: gray;"> &nbsp; ({{ post.date | date_to_string }}) </span>
 		
 		 </h3>
-		 </p>
+		 </div>
+		 </div>
 		 {% endif %}
 	 {% endfor %}
 		 
