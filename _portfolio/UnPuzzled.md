@@ -46,7 +46,7 @@ Here's an animation of the solver in action
 {: style="background-color: pink"}
 
 
-We evaluated solvers based on three checking-adjacency models, namely _AdjacencyClassifier_NoML_ (a hand-engineered model), _FromScratch_ (a simple CNN) and _ResNetFT_ (a fine-tuned ResNet 18 model).
+I evaluated solvers based on three checking-adjacency models, namely _AdjacencyClassifier_NoML_ (a hand-engineered model), _FromScratch_ (a simple CNN) and _ResNetFT_ (a fine-tuned ResNet 18 model).
 
 
 
