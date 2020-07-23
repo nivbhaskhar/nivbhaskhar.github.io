@@ -13,7 +13,7 @@ Well, the 3 Rs refer to Reading, wRiting, and aRithmetic. So the first R, dear r
 
 # An overview
 {: style="background-color: pink"}
-A Flask web application where readers can sign up, log in and look up books and read and write reviews for them. The application also uses the Goodreads API to pull up Goodreads data for queried books. Finally, the web app comes with API access for users to query details about a book with its ISBN `(/api<isbn>)`
+The First R is a Flask web application where readers can sign up, log in and look up books and read and write reviews for them. The application also uses the Goodreads API to pull up Goodreads data for queried books. Finally, the web app comes with API access for users to query details about a book with its ISBN `(/api<isbn>)`
 
 
 
