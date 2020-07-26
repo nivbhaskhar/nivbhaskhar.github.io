@@ -9,7 +9,7 @@ order : 4
 ### Current courses @ USC
 {: style="text-align: center ; background-color: pink"}
 
-| Elementary number theory | Math 430 | Fall 2020 |
+| Theory of numbers | Math 430 | Fall 2020 |
 | Statistical Inference and Data Analysis 1 | Math 307 | Fall 2020 |
 
 
