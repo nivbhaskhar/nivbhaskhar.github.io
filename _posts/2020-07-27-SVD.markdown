@@ -17,7 +17,7 @@ Singular value decomposition of a matrix is often taught at the tail end of a fi
 
 To be more precise but still prosaic, the actual result is as follows: 
 > Let $$A$$ be an $$n \times m$$ matrix. Then $$A = U\Sigma V^T$$ where 
- * $$U$$ is an $$n \times n$$ orthogonal[^1] matrix
+ * $$U$$ is an $$n \times n$$ *orthogonal*{: style="color: hotpink"}[^1] matrix
  * $$V$$ is an $$m \times m$$ orthogonal matrix
  * $$\Sigma$$ is an $$n\times m$$ matrix where every entry except the first $$r$$ diagonal entries is zero where $$r$$ is the rank of $$A$$.
  * Further the non-zero diagonal entries of $$\Sigma$$ are precisely the so-called *singular values*{: style="color: hotpink"}[^2] of $$A$$ arranged in descending order.
@@ -59,7 +59,7 @@ Let's visualize how our linear transformation $$T$$ acts on the standard coordin
 ![action on coordinate axes](/assets/action_on_coordinate_axes.png){:class="img-responsive"}{: style="display: block; margin-left: auto; margin-right: auto;"} 
 
 
-# Find perpendicular axes that stay perpendicular ?
+# Finding perpendicular axes that stay perpendicular
 {: style="text-align: center; background-color: pink"}
 
 
@@ -83,7 +83,14 @@ The singular value decomposition of $$A$$ precisely answers the above question!
 > $$A = U \Sigma V^T$$
 {: title ="SVD of A"}
 
-Recall $$V$$ in the SVD of $$A$$ is an $$m \times m$$ orthogonal matrix. Thus, the columns of $$V$$ form an orthonormal basis $$\{v_1, v_2, \ldots, v_m\}$$ of $$\mathbb{R}^m$$. Similarly $$U$$ is an orthogonal $$n \times n$$ matrix, so the columns of $$U$$ form an orthonormal basis $$\{u_1, u_2, \ldots u_n\}$$ of $$\mathbb{R}^n$$
+
+![action on coordinate axes](/assets/SVD.png){:class="img-responsive"}{: style="display: block; margin-left: auto; margin-right: auto;"} 
+
+
+Recall $$V$$ in the SVD of $$A$$ is an $$m \times m$$ orthogonal matrix. Thus, the columns of $$V$$ form an orthonormal basis $$\{v_1, v_2, \ldots, v_m\}$$ of $$\mathbb{R}^m$$. 
+
+
+Similarly $$U$$ is an orthogonal $$n \times n$$ matrix, so the columns of $$U$$ form an orthonormal basis $$\{u_1, u_2, \ldots u_n\}$$ of $$\mathbb{R}^n$$
 
 _But how are $$U$$ and $$V$$ related ?_
 
@@ -94,7 +101,7 @@ Right-multiplying the equation $$A = U\Sigma V^T$$ by $$V$$, gives
 So the columns of $$U\Sigma$$ are precisely $$\{T(v_1), T(v_2), \ldots T(v_m)\} \subset \mathbb{R}^n$$.
 
 
-Further since $$\Sigma$$ is an $$n \times m $$ matrix with non-zero entries only along the diagonal entries ($$\Sigma_{i,i}$$) if at all,
+Further since $$\Sigma$$ is an $$n \times m $$ matrix with non-zero entries only along the diagonal entries ($$\Sigma_{i,i}$$) if at all, the columns of $$U\Sigma$$ are just the first $$m$$ columns of $$U$$ scaled by the respective diagonal entries of $$\Sigma$$
 
 $$U\Sigma = \left(
  \begin{array}{cccc}
@@ -126,7 +133,11 @@ _So, you see the SVD of a matrix gives us a LOT of very useful information!_
 # Uniqueness of the SVD ?
 {: style="text-align: center; background-color: pink"}
 
-Since the non-zero diagonal entries of $$\Sigma$$ are precisely the *singular values* of $$A$$ in descending order, $$\Sigma$$ is unique for a given matrix $$A$$. However, the columns of $$V$$ (and hence $$U$$) can vary up to sign ...
+Since the non-zero diagonal entries of $$\Sigma$$ are precisely the *singular values* of $$A$$ in descending order, $$\Sigma$$ is unique for a given matrix $$A$$. 
+
+
+However, the columns of $$V$$ (and hence $$U$$) are not unique. For a start, the columns of $$V$$ can vary up to sign (and since $$T(v_i)$$ is just $$u_i$$ scaled by a constant, $$u_i$$'s sign will change too). To see why $$U,V$$ need not be unique and not just up to sign, think about what the singular value decomposition is for a rotation matrix $$A$$.
+{: style="color: hotpink"}
 
 
 
@@ -170,18 +181,18 @@ array([[-0.89442719,  0.4472136 ],
 $$ \left( \begin{array}{cc}
       6 & 2  \\
       -7 & 6 
-    \end{array} \right)= 
+    \end{array} \right) \approx 
     \left( \begin{array}{cc}
-      -0.4472136  &  0.89442719 \\
-       0.89442719 & 0.4472136  \\
+      -0.45  &  0.89 \\
+       0.89 & 0.45 \\
     \end{array} \right)
   \left( \begin{array}{cc}
       10  &  0 \\
        0 & 5  \\
     \end{array} \right)
   \left( \begin{array}{cc} 
--0.89442719 & 0.4472136 \\
- 0.4472136 &  0.89442719 \\
+-0.89 & 0.45 \\
+ 0.45 &  0.89 \\
 \end{array}\right)
 $$
 
