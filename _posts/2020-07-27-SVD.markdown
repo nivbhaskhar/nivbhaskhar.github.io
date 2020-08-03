@@ -12,11 +12,11 @@ We'll assume you are familiar with (i.e. know the basic ideas and definitions of
 # SVD in textbooks
 {: style="text-align: center; background-color: pink"}
 
-*Singular value decomposition*{: style="color: hotpink"} a.k.a SVD of a matrix is often taught at the tail end of a first course in Linear algebra. Prosaically speaking, singular value decomposition of a real matrix is nothing but __taking the matrix and expressing it as a product of three _nicer_ matrices__. 
+*Singular value decomposition*{: style="color: hotpink"} a.k.a SVD of a real matrix is often taught at the tail end of a first course in Linear algebra. Prosaically speaking, singular value decomposition of a real matrix is nothing but __taking the matrix and expressing it as a product of three _nicer_ matrices__. 
 &nbsp;  
 
 To be more precise but still prosaic, the actual result is as follows: 
-> Let $$A$$ be an $$n \times m$$ matrix. Then $$A = U\Sigma V^T$$ where 
+> Let $$A$$ be an $$n \times m$$ real matrix. Then $$A = U\Sigma V^T$$ where 
  * $$U$$ is an $$n \times n$$ *orthogonal*{: style="color: hotpink"}[^1] matrix
  * $$V$$ is an $$m \times m$$ orthogonal matrix
  * $$\Sigma$$ is an $$n\times m$$ matrix where every entry except the first $$r$$ diagonal entries is zero where $$r$$ is the rank of $$A$$.
