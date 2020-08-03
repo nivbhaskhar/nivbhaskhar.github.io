@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Singular Value Decomposition"
+title: "SVD - What is it ?"
 date: 2020-07-27 08:53:21 -0700
 tags: [Linear algebra, Expository writing]
 ---
@@ -12,7 +12,7 @@ We'll assume you are familiar with (i.e. know the basic ideas and definitions of
 # SVD in textbooks
 {: style="text-align: center; background-color: pink"}
 
-Singular value decomposition of a matrix is often taught at the tail end of a first course in Linear algebra. Prosaically speaking, singular value decomposition of a real matrix is nothing but __taking the matrix and expressing it as a product of three _nicer_ matrices__. 
+*Singular value decomposition*{: style="color: hotpink"} a.k.a SVD of a matrix is often taught at the tail end of a first course in Linear algebra. Prosaically speaking, singular value decomposition of a real matrix is nothing but __taking the matrix and expressing it as a product of three _nicer_ matrices__. 
 &nbsp;  
 
 To be more precise but still prosaic, the actual result is as follows: 
