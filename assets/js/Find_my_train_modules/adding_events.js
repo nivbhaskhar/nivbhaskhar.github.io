@@ -8,6 +8,10 @@ import {process_and_plot_current_vehicle_data} from '/assets/js/Find_my_train_mo
 	
 
 document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('touchstart', function() {
+	document.getElementById('best-viewed-on').innerHTML="Best viewed on non-touch devices!";
+
+    });
     //draw static train-tracks
     var ctx = document.getElementById('trains_tracks').getContext('2d');
     draw_train_tracks(ctx,dist_bet_stops);
