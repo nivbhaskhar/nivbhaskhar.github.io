@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      body {
+	  margin: 0px;
+      }
+      .canvas-container {
+	  margin:auto;
+      }
+
+      
+ 
+      .headerbar {
+	  overflow: hidden;
+	  background-color: #f2f2f2;
+	  color: black;
+	  top: 0;
+	  width: 100%;
+	  padding: 8px;
+	  margin: 0px;
+	  min-height: 45px;
+	  z-index:2;
+	
+      }
+
+      .headertext{
+	  /*margin: 8px;
+	  padding-bottom: 8px;*/
+	  font-size: 20px;
+	  text-decoration: none;
+	  text-align: center;
+	  font-family: palatino, sans-serif;
+      }
+
+       
+
+      .navbar {
+	  overflow: hidden;
+	  color: #f2f2f2;
+	  position: fixed;
+	  bottom: 0;
+	  width: 100%;
+	  z-index:3;
+	  margin: 0px;
+	  background-color: black;
+      }
+      @media (min-width: 600px) {
+	  .navbar {
+	      display: grid;
+	      grid-template-columns: 1fr 1fr 0.01fr;
+	  }
+
+
+      }
+
+
+
+      
+
+      .navtext {
+	  color: #f2f2f2;
+	  padding-left: 8px;
+	  padding-right: 8px;
+	  margin-top:8px;
+	  margin-bottom:8px;
+	  text-decoration: none;
+	  font-size: 17px;
+	  display: grid;
+	  grid-template-columns: 0.1fr 1fr;
+
+      }
+      #navleft {
+	  background-color: black;
+      }
+      #navright {
+	  background-color: black;
+      }
+      #navbutton {
+	  margin-top: 8px;
+	  margin-bottom: 8px;
+	  padding-left: 8px;
+	  padding-right:8px;
+	  background-color: black;
+      }
+      #current_trains_cumulative {
+	  font-size: 17px;
+	  border: 1px;
+	  background: #f2f2f2;
+	  color: black;
+	  box-shadow: none;
+	  border-radius: 4px;
+      }
+
+
+    </style>
+    <meta charset="utf-8"/>
+    <script src="assets/js/Find_my_train_modules/lib/fabric.js"></script>
+    
+  <script type="module" src="assets/js/Find_my_train_modules/constants.js"></script>
+  <script type="module" src="assets/js/Find_my_train_modules/static_train_tracks.js"></script>
+  <script type="module" src="assets/js/Find_my_train_modules/API_processing.js"></script>
+  <script type="module" src="assets/js/Find_my_train_modules/adding_events.js"></script>
+    
+    <title>Find my train</title>
+    
+  </head>
+  <body>
+
+    <div class="headerbar"> <div class="headertext">FIND MY TRAIN </div> <div style="text-align: center"> A visualization of the LA Metro by <a class="website-link" href="https://nivbhaskhar.github.io">Nivedita Bhaskhar</a></div></div>
+      </div>
+
+
+    <div class="navbar">
+      <div id="navleft">
+        <div class="navtext">
+	  <div>Stop:&nbsp;</div>
+	  <div id="stop_details"></div>
+	</div>
+      </div>
+      <div id="navright">
+	<div class="navtext">
+	  <div>Train:&nbsp;</div>
+	  <div id="vehicle"></div>
+	</div>
+      </div>
+      <div id="navbutton">
+	<span><button id="current_trains_cumulative">Find trains</button></span>
+      </div>
+    </div>
+
+       
+	 
+<div style="position: relative; margin-top: 8px; padding-top: 8px;">
+<div style="position: relative; margin: auto; height=1400px;width: 1200px;">
+	 <canvas id="trains_tracks" width="1200" height="1400" style="position: absolute;z-index: 0;">Your browser doesn't support canvas. Otherwise you could have seen the design of the UI for Find My Train</canvas>
+	 </div>
+      <canvas id="trains" width="1200" height="1400" style="position: absolute; z-index: 1;">Your browser doesn't support canvas. Otherwise you could have seen the design of the UI for Find My Train</canvas>
+   </div>
+
+
+    
+    
+    
+
+  </body>
+</html>
