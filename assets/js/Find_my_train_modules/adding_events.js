@@ -110,6 +110,7 @@ function current_trains_cumulative(canvas){
 	.catch(e => {
 	    alert('Error! Try again shortly. Details:' + e.message);
 	});
+
     
 }
 
