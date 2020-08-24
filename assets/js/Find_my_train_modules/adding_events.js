@@ -5,13 +5,27 @@ import {draw_train_tracks,engine_icon,train_stop} from '/assets/js/Find_my_train
 
 import {process_and_plot_current_vehicle_data} from '/assets/js/Find_my_train_modules/API_processing.js';
 
-	
+function add_scroll_bars(){
+    	var h1= document.getElementById("headerbar_id").offsetHeight;
+	var w1 =  document.getElementById("headerbar_id").offsetWidth;
+	var h2= document.getElementById("navbar_id").offsetHeight;
+	var w2 =  document.getElementById("navbar_id").offsetWidth;
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+	document.getElementById("scrollcontainer_id").style.height = `${(h-h1-h2-5)}px`;
+	document.getElementById("scrollcontainer_id").style.width = `${(w-w1-w2-5)}px`;
+    
+    
+}
 
 document.addEventListener('DOMContentLoaded', function() {
-    window.addEventListener('touchstart', function() {
-	document.getElementById('best-viewed-on').innerHTML="Best viewed on non-touch devices!";
 
-    });
+    
+    
+    window.addEventListener("touchstart", add_scroll_bars);
+     window.addEventListener("touchend", add_scroll_bars);
+
+
     //draw static train-tracks
     var ctx = document.getElementById('trains_tracks').getContext('2d');
     draw_train_tracks(ctx,dist_bet_stops);
