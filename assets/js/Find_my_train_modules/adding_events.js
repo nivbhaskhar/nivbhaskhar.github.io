@@ -102,13 +102,13 @@ function current_trains_cumulative(canvas){
 		}
 		//Catch Error - no vehicles
 		if (initial_data.items.length==0){
-		    throw new Error("No current predictable vehicles");
+		    throw new Error("API down. No current predictable vehicles");
 		}
 		else{return current_vehicles;}
 	    })
 	.then(process_and_plot_current_vehicle_data.bind(null,canvas))
 	.catch(e => {
-	    alert('There has been a problem with your fetch operation: ' + e.message);
+	    alert('Error! Try again shortly. Details:' + e.message);
 	});
     
 }

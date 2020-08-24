@@ -114,47 +114,12 @@
 	  background-color: black;
       }
 
-      .frame {
+      .scrollcontainer {
 	  position: relative;
 	  overflow: scroll;
 	   margin-top: 0px;
 	   padding-top: 0px;
-	   line-height: 1em;
-
-
-   
-}
-
-.frame::-webkit-scrollbar {
-    -webkit-appearance: none;
-}
-
-.frame::-webkit-scrollbar:vertical {
-    width: 11px;
-}
-
-.frame::-webkit-scrollbar:horizontal {
-    height: 11px;
-}
-
-.frame::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    border: 2px solid white; /* should match background, can't be transparent */
-    background-color: rgba(0, 0, 0, .5);
-}
-
-
- 
-      .scrollcontainer {
-	  position: relative;
-	  margin-top: 8px;
-	  padding-top: 8px;
-	  overflow: scroll;
-	  -webkit-overflow-scrolling: touch;
-	  height: 1400;
-	  width: 1200;
-
-      }
+	   line-height: 1em;}
 
 .scrollcontainer::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -170,9 +135,12 @@
 
 .scrollcontainer::-webkit-scrollbar-thumb {
     border-radius: 8px;
-    border: 10px solid white; /* should match background, can't be transparent */
+    border: 2px solid white; /* should match background, can't be transparent */
     background-color: rgba(0, 0, 0, .5);
 }
+
+
+ 
 
 
       
@@ -222,7 +190,7 @@
 
        
 	 
-<div class="frame" id="scrollcontainer_id">
+<div class="scrollcontainer" id="scrollcontainer_id">
 <div style="position: relative; margin: auto; height=1400px;width: 1200px;">
 	 <canvas id="trains_tracks" width="1200" height="1400" style="position: absolute;z-index: 0;">Your browser doesn't support canvas</canvas>
 	 </div>
