@@ -21,7 +21,7 @@ function add_scroll_bars(){
 function not_supported(){
     document.getElementById("scrollcontainer_id").style.width="100%";
     document.getElementById("scrollcontainer_id").style.margin="auto";
-    document.getElementById("scrollcontainer_id").innerHTML = "<p style='text-align:center;margin-top: 50%; color: red; width: 100%'> Sorry! Not supported on touch devices. Try it from a desktop/laptop :) </p>" ;
+    document.getElementById("scrollcontainer_id").innerHTML = "<p style='text-align:center;margin-top: 100px; color: red; width: 100%'> Sorry! Not supported on touch devices. Try it from a desktop/laptop :) </p>" ;
    
    
     
