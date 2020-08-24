@@ -18,12 +18,24 @@ function add_scroll_bars(){
     
 }
 
+function not_supported(){
+    document.getElementById("scrollcontainer_id").style.width="100%";
+    document.getElementById("scrollcontainer_id").style.margin="auto";
+    document.getElementById("scrollcontainer_id").innerHTML = "<p style='text-align:center;margin-top: 50%; color: red; width: 100%'> Sorry! Not supported on touch devices. Try it from a desktop/laptop :) </p>" ;
+   
+   
+    
+
+}
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
 
     
     
-    window.addEventListener("touchstart", add_scroll_bars);
-     window.addEventListener("touchend", add_scroll_bars);
+    window.addEventListener("touchstart", not_supported);
+    window.addEventListener("touchend", not_supported);
 
 
     //draw static train-tracks
