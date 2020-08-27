@@ -29,13 +29,40 @@ function not_supported(){
 }
 
 
+function touch_support(){
+    document.getElementById("trains").style.pointerEvents = "none";
+    var canvases = document.getElementsByClassName("upper-canvas");
+    var touch_canvas = canvases[0];
+    touch_canvas.style.pointerEvents = "none";
+    document.addEventListener("mousedown", function(e) {
+	if('custom' in e) {
+	    return
+	}
+	else {
+
+	   
+	    var new_event = new MouseEvent(e.type, e);
+	    new_event.custom = true;
+	    touch_canvas.dispatchEvent(new_event);
+	    return;
+	}
+    }, false);
+    window.removeEventListener("touchstart", touch_support);
+    window.removeEventListener("touchend", touch_support);
+}
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
 
+
     
     
-    window.addEventListener("touchstart", not_supported);
-    window.addEventListener("touchend", not_supported);
+    window.addEventListener("touchstart", touch_support);
+
+    window.addEventListener("touchend", touch_support);
+
+    
 
 
     //draw static train-tracks
