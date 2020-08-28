@@ -2,7 +2,7 @@
 layout: post
 title: "SVD - What is it ?"
 date: 2020-07-27 08:53:21 -0700
-tags: [Linear algebra, Expository writing]
+tags: [Linear algebra]
 ---
 
 # Prerequisites

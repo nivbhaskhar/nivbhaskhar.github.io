@@ -2,7 +2,7 @@
 layout: post
 title: "SVD - The details"
 date: 2020-08-03 08:53:21 -0700
-tags: [Linear algebra, Expository writing]
+tags: [Linear algebra]
 ---
 
 # Prerequisites
