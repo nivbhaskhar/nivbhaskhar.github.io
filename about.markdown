@@ -9,7 +9,7 @@ permalink: /
 ![My picture](https://avatars3.githubusercontent.com/u/54605543?s=400){:class="img-responsive"}{: style="display: block; margin-left: auto; margin-right: auto; border-radius: 25%;"}
 
 
-Hello there! My name is Nivedita Bhaskhar and I am a mathematician and programmer. I am currently an RTPC Assistant Professor of mathematics at USC, where I work with mathematical structures called _algebraic groups_. 
+Hello there! My name is Nivedita Bhaskhar and I am a mathematician and programmer. I am currently an RTPC Assistant Professor of Mathematics at USC, where I work with mathematical structures called _algebraic groups_. 
 {: style="text-align: justify"}
 
 
