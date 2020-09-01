@@ -2,7 +2,7 @@
 layout: post
 title: "Working with real data - baby steps"
 date: 2020-08-27 08:53:21 -0700
-tags: [Data wrangling, Python]
+tags: [Data wrangling, Python-libraries]
 ---
 
 # How's the weather ?
