@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "k-fold cross-validation"
-date: 2020-09-01 08:53:21 -0700
+date: 2020-09-03 08:53:21 -0700
 tags: [ML, Statistics, Python-libraries]
 ---
 
