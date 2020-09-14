@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Linear regression and the normal equation"
-date: 2020-09-03 08:53:21 -0700
+date: 2020-09-13 08:53:21 -0700
 tags: [ML, Linear algebra]
 ---
 

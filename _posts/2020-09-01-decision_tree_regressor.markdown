@@ -382,7 +382,7 @@ Code:
 y_test_numpy = y_test.to_numpy()
 
 #Root mean squared error between predictions and test values
-print(f"Root mean squared error : {mean_squared_error(y_test_numpy,y_pred,squared=False}")
+print(f"Root mean squared error : {mean_squared_error(y_test_numpy,y_pred,squared=False)}")
 ~~~
 
 Output:
