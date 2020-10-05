@@ -6,16 +6,16 @@ tags: [Data wrangling, Python-libraries]
 ---
 
 # How's the weather ?
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 Let's do a really simple analysis of the daily temperatures for a particular region, say an area in LA. Our goal is to collect a year's worth of daily temperatures and find the dataset's mean and variance.
 
 
 # Capturing the data
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
-If you head over to [https://dev.meteostat.net/](https://dev.meteostat.net/), you can get full data dumps of individual weather stations. A little browsing around tells you that the weather station at Los Angeles/Jefferson (coordinates point to [here](https://www.google.com/maps/place/34%C2%B001'00.1%22N+118%C2%B016'59.9%22W/@34.0167044,-118.3008095,14z/data=!4m5!3m4!1s0x0:0x0!8m2!3d34.0167!4d-118.2833)) has the id *KCQT0*{: style="color: hotpink"}.
+If you head over to [https://dev.meteostat.net/](https://dev.meteostat.net/), you can get full data dumps of individual weather stations. A little browsing around tells you that the weather station at Los Angeles/Jefferson (coordinates point to [here](https://www.google.com/maps/place/34%C2%B001'00.1%22N+118%C2%B016'59.9%22W/@34.0167044,-118.3008095,14z/data=!4m5!3m4!1s0x0:0x0!8m2!3d34.0167!4d-118.2833)) has the id *KCQT0*{: style="color: blue"}.
 
 
 To get a csv file of the daily data from this weather station, you can type the following command in your terminal
@@ -36,7 +36,7 @@ The API docs again tell you that this corresponds to
 
 
 # Framing the data
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 Let's read the csv file and put the data into a pandas dataframe. 
 
@@ -135,7 +135,7 @@ OK, that looks better.
 
 
 # To numpy and beyond
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 We'll now take the _avgtemp_ column of our *daily_weather_df* data frame and turn it into a numpy array. Since we only want a year's worth of temperatures, we'll only keep the last 365 values from the numpy array.
 
@@ -175,7 +175,7 @@ Output:
     Variance is nan
 
 
-*Oh dear, now what happened?*{: style="color: red"}
+*Oh dear, now what happened?*{: style="color: #ccd9ff"}
 
 &nbsp;
 
@@ -211,7 +211,7 @@ Output:
 
 
 Footnotes
-{: style="color: hotpink"}
+{: style="color: blue"}
 
 [^1]: NaN means Not a number
 

@@ -47,7 +47,7 @@ images[0].save('output.gif',
 
 
 # Main parameters of Image.save()
-{: style="text-align: center ; background-color: pink"}
+{: style="text-align: center ; background-color: #ccd9ff"}
 
 
 * __loop__ :

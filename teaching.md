@@ -7,21 +7,21 @@ order : 4
 ---
 
 ### Current courses @ USC
-{: style="text-align: center ; background-color: pink"}
+{: style="text-align: center ; background-color: #ccd9ff"}
 
 | Theory of numbers | Math 430 | Fall 2020 |
 | Statistical Inference and Data Analysis 1 | Math 307 | Fall 2020 |
 
 
 ### Previous courses @ USC
-{: style="text-align: center ; background-color: pink"}
+{: style="text-align: center ; background-color: #ccd9ff"}
 
 | Calculus 1 |    Math 125 (Sec 1)|	Spring 2020 |
 | Calculus 1 |    Math 125 (Sec 2)|	Spring 2020 |
 | Contemporary Precalculus |	Math 108 | Fall 2019 |
 
 ### Previous courses @ UCLA
-{: style="text-align: center ; background-color: pink"}
+{: style="text-align: center ; background-color: #ccd9ff"}
 
 | Mathematical Cryptology	| Math 116	 | Spring 2019 |
 | Analysis	| Math 131A |	Spring 2019 |

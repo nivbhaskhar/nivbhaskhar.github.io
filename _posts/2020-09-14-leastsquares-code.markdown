@@ -6,12 +6,12 @@ tags: [ML, Python-libraries]
 ---
 
 # Prerequisites
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 We'll assume you that you have read [this post](/2020/09/13/leastsquares.html) on least-squares solution and the normal equation
 
 
 # Finding least-squares solutions
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 In this post, we'll see the numpy code for doing linear regression by solving the normal equation $$X^TX\theta = X^TY$$.
 
 
@@ -25,7 +25,7 @@ Finding $$\theta$$ in this manner would typically involve inverting $$X^TX$$ whi
 
 
 # Imports
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 As before, we'll be using libraries like pandas, numpy, matplotlib and scikit-learn. So you'll have to preface your code with the following import statements.
 
@@ -45,7 +45,7 @@ from sklearn.metrics import mean_squared_error
 
 
 # The weather dataset yet again
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 Let's continue with our weather example from [before](https://nivbhaskhar.github.io/2020/09/01/decision_tree_regressor.html). Say we have access to the average daily temperature $$T$$, the wind-gut $$W$$ , and the total minutes of sunshine $$S$$ per day. These will be our features. We would like to predict the amount of precipitation $$P$$ each day using linear regression. 
@@ -154,7 +154,7 @@ $$P = \theta_0 + \theta_1 T + \theta_2 W + \theta_3 S$$
 
 
 # Splitting into training and test data sets
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 Code:
 ```python
@@ -175,7 +175,7 @@ Output:
 
 
 # Massaging the training data into the right type and shape
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 Let's understand the types of our training and test data
@@ -241,7 +241,7 @@ print(type(Y), Y.shape)
 
 
 # Solving the normal equation
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 The numpy code to find transposes, inverses, take dot products or multiply matrices is easy. In particular, $$X.T$$ is the transpose of $$X$$, $$np.linalg.inv(X)$$ is $$X^{-1}$$ and $$a.dot(b)$$ is the dot-product of $$a$$ and $$b$$.
 
@@ -259,7 +259,7 @@ print(f" theta_best is {theta_best}")
 
 
 # Predictions
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 Let's now massage the test data into the right type and shape also!
 
@@ -305,7 +305,7 @@ print(f"Shape of y_pred is {y_pred.shape}")
 
 
 # Evaluation of predictions
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 ```python
@@ -338,7 +338,7 @@ plt.legend();
 
 
 # Comparison to earlier validation-error estimate
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 The root mean squared error on our test-data set from our decision tree regressor on the same dataset [earlier](https://nivbhaskhar.github.io/2020/09/01/decision_tree_regressor.html) was around 1.77. We see that the root mean squared error has gone down to 1.56 for our linear regressor.
 

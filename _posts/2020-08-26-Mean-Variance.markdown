@@ -8,16 +8,16 @@ tags: [Statistics]
 
 
 # One dimensional data
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 Let's assume we are working with a dataset whose data-points $$x_1, x_2, \ldots, x_N$$  are one dimensional.
 
-The *mean*{: style="color: hotpink"} of the dataset is defined to be 
+The *mean*{: style="color: blue"} of the dataset is defined to be 
 > $$\mu = \frac{x_1 + x_2 + \ldots x_N}{N}.$$ 
 {: title="mean"}
 
 
-The *variance*{: style="color: hotpink"} is defined to be 
+The *variance*{: style="color: blue"} is defined to be 
 >$$\sigma^2 = \frac{(x_1-\mu)^2 + (x_2-\mu)^2 + \ldots (x_N-\mu)^2}{N}.$$ 
 {: title="variance"}
 
@@ -50,18 +50,18 @@ Output:
 
 
 # Higher dimensional data
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 Say now we are working with a dataset whose data-points $$x_1, x_2, \ldots, x_N$$  are $$d$$ dimensional, i.e. each $$x_i$$ is a $$d\times 1$$ column vector.
 
 
-The *mean*{: style="color: hotpink"} of the dataset is defined to be 
+The *mean*{: style="color: blue"} of the dataset is defined to be 
 > $$\mu = \frac{x_1 + x_2 + \ldots x_N}{N}.$$ 
 {: title="mean"}
 
 
-The *covariance matrix*{: style="color: hotpink"} is defined to be 
+The *covariance matrix*{: style="color: blue"} is defined to be 
 >$$S= \frac{(x_1-\mu)(x_1-\mu)^T + (x_2-\mu)(x_2-\mu)^T + \ldots (x_N-\mu)(x_N-\mu)^T}{N}.$$ 
 {: title="covariance-matrix"}
 
@@ -71,7 +71,7 @@ Note that since $$x_i, \mu$$ have shape $$d\times 1$$, $$(x_i-\mu)(x_i-\mu)^T$$ 
 
 
 # A more compact formula
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 To make the definition of the variance neater, let's assemble our data-points into a $$d\times N$$ matrix $$X$$.
@@ -102,7 +102,7 @@ By some matrix manipulation[^1], the covariance matrix turns out to be nothing b
 
 
 # Computation
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 Say we have 3 data-points, each of which is two-dimensional. Then we can represent the dataset as 
@@ -147,7 +147,7 @@ Output:
 
 
 # Caution
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 * When you input the dataset as a numpy array (think of it as a list $$L$$ of lists $$r_i$$), each $$r_i$$ is the list of the $$i$$-th coordinates of the data-points. The size of $$L$$ which is the number of $$r_i$$s would be the dimension of the data-points, while the size of each $$r_i$$ would be the number of data-points
@@ -160,7 +160,7 @@ Some people might refer to the attributes as $$x_1,x_2,\ldots$$. So take a momen
 * By default, bias is set to False in np.cov. This would give the so-called *sample-covariance matrix*. If you want the usual covariance, remember to set bias=True
 
 # Symmetry
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 Notice that the covariance matrix in the previous example is symmetric. This is in fact true for every covariance matrix. Why ?
 
@@ -174,7 +174,7 @@ Et voila!
 &nbsp;
 
 Footnotes
-{: style="color: hotpink"}
+{: style="color: blue"}
 
 [^1]: $$\begin{align*} \tilde{X}\tilde{X^T} &= \sum_{i=1}^{N}  \left(\begin{array}{ccccc} \overline{0} &  \ldots &  \overline{0} & x_i-\mu & \overline{0} \ldots & \overline{0} \\ \end{array}\right)\tilde{X}^T  \\  & = \sum_{i=1}^N \left(\begin{array}{ccccc} \overline{0} &  \ldots &  \overline{0} & x_i-\mu & \overline{0} \ldots & \overline{0} \end{array}\right)\left[\sum_{j=1}^{N} \left(\begin{array}{c} \overline{0} \\  \ldots \\ \overline{0} \\ (x_j-\mu)^T \\ \overline{0}^T \\ \ldots \\ \overline{0}^T \end{array}\right) \right] \\ &= \sum_{i=1}^{N} (x_i-\mu)(x_i-\mu)^T  = NS \end{align*}$$
 

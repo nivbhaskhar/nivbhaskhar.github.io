@@ -6,21 +6,21 @@ tags: [Linear algebra]
 ---
 
 # Prerequisites
-{: style="text-align: center; background-color: pink"}
-We'll assume you are familiar with (i.e. know the basic ideas and definitions of) the following topics: *matrices as linear maps, rank of a matrix, eigen-values and eigen-vectors, orthogonality*{: style="color: hotpink"}. 
+{: style="text-align: center; background-color: #ccd9ff"}
+We'll assume you are familiar with (i.e. know the basic ideas and definitions of) the following topics: *matrices as linear maps, rank of a matrix, eigen-values and eigen-vectors, orthogonality*{: style="color: blue"}. 
 
 # SVD in textbooks
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
-*Singular value decomposition*{: style="color: hotpink"} a.k.a SVD of a real matrix is often taught at the tail end of a first course in Linear algebra. Prosaically speaking, singular value decomposition of a real matrix is nothing but __taking the matrix and expressing it as a product of three _nicer_ matrices__. 
+*Singular value decomposition*{: style="color: blue"} a.k.a SVD of a real matrix is often taught at the tail end of a first course in Linear algebra. Prosaically speaking, singular value decomposition of a real matrix is nothing but __taking the matrix and expressing it as a product of three _nicer_ matrices__. 
 &nbsp;  
 
 To be more precise but still prosaic, the actual result is as follows: 
 > Let $$A$$ be an $$n \times m$$ real matrix. Then $$A = U\Sigma V^T$$ where 
- * $$U$$ is an $$n \times n$$ *orthogonal*{: style="color: hotpink"}[^1] matrix
+ * $$U$$ is an $$n \times n$$ *orthogonal*{: style="color: blue"}[^1] matrix
  * $$V$$ is an $$m \times m$$ orthogonal matrix
  * $$\Sigma$$ is an $$n\times m$$ matrix where every entry except the first $$r$$ diagonal entries is zero where $$r$$ is the rank of $$A$$.
- * Further the non-zero diagonal entries of $$\Sigma$$ are precisely the so-called *singular values*{: style="color: hotpink"}[^2] of $$A$$ arranged in descending order.
+ * Further the non-zero diagonal entries of $$\Sigma$$ are precisely the so-called *singular values*{: style="color: blue"}[^2] of $$A$$ arranged in descending order.
 
 {: title="SVD formula"}
 
@@ -30,7 +30,7 @@ If that .. looks a bit tame, let's try and understand the power and utility of t
 &nbsp;  
 
 # Information encoded by a matrix 
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 
@@ -41,7 +41,7 @@ $$ A  =  \left( \begin{array}{cc}
       -7 & 6 
     \end{array} \right) $$
 
-It is actually representing a *linear map*{: style="color: hotpink"} $$T: \mathbb{R}^2 \to \mathbb{R}^2$$ with respect to the standard basis $$e_1 = (1,0)$$ and $$e_2 = (0,1)$$. The linear map $$T$$ sends the usual basis elements $$e_1\rightsquigarrow (6,-7)$$ and $$e_2\rightsquigarrow (2,6)$$. Now, not only do we know how $$T$$ acts on $$e_1$$ and $$e_2$$, we actually know how it acts on *any* $$(a,b)$$. For instance 
+It is actually representing a *linear map*{: style="color: blue"} $$T: \mathbb{R}^2 \to \mathbb{R}^2$$ with respect to the standard basis $$e_1 = (1,0)$$ and $$e_2 = (0,1)$$. The linear map $$T$$ sends the usual basis elements $$e_1\rightsquigarrow (6,-7)$$ and $$e_2\rightsquigarrow (2,6)$$. Now, not only do we know how $$T$$ acts on $$e_1$$ and $$e_2$$, we actually know how it acts on *any* $$(a,b)$$. For instance 
 
 $$
 \begin{align*}
@@ -60,13 +60,13 @@ Let's visualize how our linear transformation $$T$$ acts on the standard coordin
 
 
 # Finding perpendicular axes that stay perpendicular
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff}
 
 
 Because it is always easier to work with perpendicular axes, we would like to find perpendicular axes of our domain (or rather unit vectors along these axes) which _remain_ perpendicular even after applying $$T$$. Clearly $$\{e_1, e_2\}$$ was not a good choice. Is there a good choice ? If so, how can we find it ? 
 
 
-A basis of a vector space consisting of unit vectors which are pairwise perpendicular to each other is called an _orthonormal basis_{: style="color: hotpink"} of the vector space. Thus our question in the more general context can be phrased as follows : 
+A basis of a vector space consisting of unit vectors which are pairwise perpendicular to each other is called an _orthonormal basis_{: style="color: blue"} of the vector space. Thus our question in the more general context can be phrased as follows : 
 
 
 > Given a linear map &nbsp; $$T : \mathbb{R}^m \to \mathbb{R}^n$$ (which is represented by a $$n \times m$$ matrix $$A$$ with respect to the standard basis), can we find an orthonormal basis $$\{v_1, v_2, \ldots, v_m\}$$ of $$\mathbb{R}^m$$ such that $$\{T(v_1),T(v_2), \ldots T(v_m) \}$$ are still mutually perpendicular[^3] to each other ? 
@@ -76,7 +76,7 @@ A basis of a vector space consisting of unit vectors which are pairwise perpendi
 
 
 # Enter SVD!
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 The singular value decomposition of $$A$$ precisely answers the above question!
 
@@ -117,7 +117,7 @@ Thus $$T(v_i) = \Sigma_{i,i} u_i$$ and they are mutually perpendicular to each o
 
 
 # Summary
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 Given a linear map $$T : \mathbb{R}^m \to \mathbb{R}^n$$ (which is represented by an $$n\times m$$ matrix A with respect to standard basis), let $$A = U\Sigma V^T $$ be the singular value decomposition of $$A$$. Then the columns of $$V$$ form an orthonormal basis of $$\mathbb{R}^m$$. Further $$\{T(v_i)\}$$ still remain perpendicular to each other in $$\mathbb{R}^n$$.
@@ -131,18 +131,18 @@ _So, you see the SVD of a matrix gives us a LOT of very useful information!_
 
 
 # Uniqueness of the SVD ?
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 Since the non-zero diagonal entries of $$\Sigma$$ are precisely the *singular values* of $$A$$ in descending order, $$\Sigma$$ is unique for a given matrix $$A$$. 
 
 
 However, the columns of $$V$$ (and hence $$U$$) are not unique. For a start, the columns of $$V$$ can vary up to sign (and since $$T(v_i)$$ is just $$u_i$$ scaled by a constant, $$u_i$$'s sign will change too). To see why $$U,V$$ need not be unique and not just up to sign, think about what the singular value decomposition is for a rotation matrix $$A$$.
-{: style="color: hotpink"}
+{: style="color: blue"}
 
 
 
 # SVD computation code
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 Of course, one can (and should know how to) compute the SVD by hand. But that's a post for another day. For now, we'll use the SVD implementation in numpy.
@@ -175,7 +175,7 @@ array([[-0.89442719,  0.4472136 ],
 
 
 # Wrapping up the example
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 $$ \left( \begin{array}{cc}
@@ -228,7 +228,7 @@ $$
 
 
 Footnotes
-{: style="color: hotpink"}
+{: style="color: blue"}
 
 [^1]: A square matrix $$X$$ is _orthogonal_ iff $$X^TX = XX^T$$ is the identity matrix
 [^2]: The _singular values_ of an $$n\times m$$ matrix A are the square roots of the eigenvalues of $$A^TA$$ listed with their algebraic multiplicities. 

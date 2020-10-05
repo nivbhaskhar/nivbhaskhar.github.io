@@ -6,7 +6,7 @@ tags: [ML, Statistics, Python-libraries]
 ---
 
 # To train or to test, that is the question..
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 [Previously](https://nivbhaskhar.github.io/2020/09/01/decision_tree_regressor.html), we built a decision tree regressor to predict the precipitation, given the other weather parameters. To do so, we split our dataset into 70% training data and 30% test data and fit a decision tree on the training data and evaluated it on the test data. However, this meant that the data reserved for testing could not be used for training and vice-versa. 
@@ -14,11 +14,11 @@ tags: [ML, Statistics, Python-libraries]
 This poses a problem if you only have very limited data to work with. Do you train with all your data and give up on evaluation, or do you reserve a chunk for testing, making your training data set even smaller ? 
 
 
-In this post, we'll see how to use all the data available for training *and* testing by using a method called *k-fold cross-validation*{: style="color: hotpink"}. A notebook with the complete code can also be found on [GitHub](https://github.com/nivbhaskhar/Tools/blob/master/scikit-learn/cross_validation.md).
+In this post, we'll see how to use all the data available for training *and* testing by using a method called *k-fold cross-validation*{: style="color: blue"}. A notebook with the complete code can also be found on [GitHub](https://github.com/nivbhaskhar/Tools/blob/master/scikit-learn/cross_validation.md).
 
 
 # What is k-fold cross-validation ?
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 The basic idea is to split up your dataset into $$k$$ chunks or *folds*. Let's call the folds $$F_1, F_2, ...F_k$$. We'll proceed to train $$k$$ models $$M_1,\ldots,M_k$$ on different training and test-data splits as follows:
 
@@ -26,20 +26,20 @@ The basic idea is to split up your dataset into $$k$$ chunks or *folds*. Let's c
 * Evaluate model $$M_i$$ on test data = $$F_i$$
 
 
-Thus, for each of the $$k$$ models $$M_i$$, we get a validation-error estimate $$E_i$$. We report the $$k$$ validation-error estimates as *cross-validation scores*{: style="color: hotpink"}[^1]. 
+Thus, for each of the $$k$$ models $$M_i$$, we get a validation-error estimate $$E_i$$. We report the $$k$$ validation-error estimates as *cross-validation scores*{: style="color: blue"}[^1]. 
 
 
-The average of these $$k$$ error-estimates tells us how biased our model is. If the average error is low, this implies our model has *low bias*{: style="color: hotpink"}. Broadly speaking, this means our model is *flexible* enough to get a good notion of the actual *truth* underlying the data.
+The average of these $$k$$ error-estimates tells us how biased our model is. If the average error is low, this implies our model has *low bias*{: style="color: blue"}. Broadly speaking, this means our model is *flexible* enough to get a good notion of the actual *truth* underlying the data.
 
 
-The standard deviation of these $$k$$ error-estimates tells us how our model's performance varies with the training dataset used. If the standard deviation is high, this means our model has *high variance*{: style="color: hotpink"}. That is, our model's performance is varying a lot with the training dataset. This is behaviour which we would like to avoid as it doesn't generalize well on unseen data.
+The standard deviation of these $$k$$ error-estimates tells us how our model's performance varies with the training dataset used. If the standard deviation is high, this means our model has *high variance*{: style="color: blue"}. That is, our model's performance is varying a lot with the training dataset. This is behaviour which we would like to avoid as it doesn't generalize well on unseen data.
 
 
 
 
 
 # Imports
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 As before, we'll be using the pandas library as well as scikit-learn. So you'll have to preface your code with the following import statements.
 
@@ -61,7 +61,7 @@ from sklearn.model_selection import cross_val_predict
 
 
 # Revisiting the weather dataset
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 As [before](https://nivbhaskhar.github.io/2020/09/01/decision_tree_regressor.html), let's use the weather dataset and prepare our *weather_features* which has three attributes, namely *avgtemp*, *wind-gut* and *sunshine*. Let's also prepare the *precipitation_targets* (which is the amount of precipitation recorded for each datapoint.
 
@@ -157,7 +157,7 @@ Target:
 
 
 # Regression tree
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 Let's set up our regression tree.
 
@@ -211,14 +211,14 @@ As you can see, the cross validation scores are negative. So the bigger they are
 
 
 # Comparison to earlier validation-error estimate
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 The mean squared error on our test-data set from [earlier](https://nivbhaskhar.github.io/2020/09/01/decision_tree_regressor.html) was 3.13. (We reported the root-mean square error to be around 1.77). We see that the average cross validation score is -3.43, or the average mean-square error of test-datasets across the $$k=5$$ folds is 3.43.
 
 The average of the cross-validation score gives a much better estimate of the error, as it uses every element in the dataset as a test-input (exactly once in some fold). 
 
 # Predictions
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 The syntax for cross validation predictions over $$k$$ folds is 
 
@@ -252,7 +252,7 @@ Output:
 
 
 Footnotes
-{: style="color: hotpink"}
+{: style="color: blue"}
 
 [^1]: A slight technicality that you'll see later on in the post - the cross validation scores are thought of as the values taken on by the utility function. That is, the bigger the scores, the better. So we try to maximize cross validation scores, or at least scikit-learn does. However, errors have to be minimized. So usually, cross validation scores are taken to be the negative of the errors.
 [^2]: See footnote 1.

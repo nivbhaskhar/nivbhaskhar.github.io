@@ -6,19 +6,19 @@ tags: [ML, Python-libraries]
 ---
 
 # Will it rain today ?
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 Let's continue to work with our weather dataset from [last time](https://nivbhaskhar.github.io/2020/08/27/working_with_real_data.html). Our goal is to analyze the weather data from the past and develop a model to predict the amount of rainfall, given the other weather parameters. 
 
 
-We are going to do this by building a *decision tree regressor*{: style="color: hotpink"}. This model sort of works like playing Twenty Questions. You build a tree of relevant queries about the accessible parameters of the dataset[^1] so that, going down a path leads you to a reasonable prediction of the target.
+We are going to do this by building a *decision tree regressor*{: style="color: blue"}. This model sort of works like playing Twenty Questions. You build a tree of relevant queries about the accessible parameters of the dataset[^1] so that, going down a path leads you to a reasonable prediction of the target.
 
 
 In this post, we'll concentrate on learning how to use scikit-learn's implementation of the decision tree regressor and leave the actual theoretical analysis of how the algorithm works to a later date. A notebook with the complete code can also be found on [GitHub](https://github.com/nivbhaskhar/Tools/blob/master/scikit-learn/decision_tree_regressor.md).
 
 # Imports
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 We'll be using the pandas library as well as scikit-learn. So you'll have to preface your code with the following import statements.
 
@@ -38,7 +38,7 @@ from sklearn.metrics import mean_squared_error
 ~~~
 
 # The dataset from before
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 Recall the *daily_weather_df* data frame we had created last time by wrangling some data from [https://dev.meteostat.net/](https://dev.meteostat.net/).
 
@@ -89,7 +89,7 @@ The API docs again tell you that the columns correspond to
 
 
 # Pruning the dataset
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 As you might remember, some of the entries of this data frame were NaNs. Let's get rid of some of the irrelevant columns and also any row that might contain a NaN entry.
@@ -124,7 +124,7 @@ That is, we have 1866 datapoint and each datapoint has four attributes, namely, 
 
 
 # Features and targets 
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 Let's first demark the data into features and target variables. Features represent the weather attributes we have access to. Target represents the attribute we are trying to predict.
@@ -206,7 +206,7 @@ Target:
 
 
 # Training and test data split
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 Now we will split up our dataset into training data and test data. As you might have guessed, we'll use the training data to train our model (i.e. build it up). And we'll evaluate the model's performance on the test-data. We go with a 70-30 split, i.e we'll use 70% of the dataset for training and keep the rest for evaluation. 
 
@@ -232,7 +232,7 @@ Output:
 
 
 # Building the Regression Tree
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 Using scikit-learn, building a decision tree regressor translates to two-lines of code!
 
@@ -258,7 +258,7 @@ Output:
 
 
 # Visualization
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 OK, so we have our tree! But what does it look like ?
 
@@ -279,7 +279,7 @@ Um, alright. This picture tells us *something* despite not being very readable. 
 However, let's aim for some better visuals so as to actually see what these questions are!
 
 # Prettier visuals
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 Code:
@@ -307,16 +307,16 @@ prettier_graph
 
 If you zoom in, the regression tree should be self-explanatory. By the way, a few words about the labels in the graph. 
 
-*Samples*{: style="color: hotpink"} refer to the number of data points which have satisfied all the queries up to that point. So for instance, samples = 1306 = size of the entire training data for the very first question (because there have been no previous queries). However samples = 683 when you look at the second row, left node. That is only 683 data points satisfied the previous query "*Is avg-temp <= 17.95*" etc.
+*Samples*{: style="color: blue"} refer to the number of data points which have satisfied all the queries up to that point. So for instance, samples = 1306 = size of the entire training data for the very first question (because there have been no previous queries). However samples = 683 when you look at the second row, left node. That is only 683 data points satisfied the previous query "*Is avg-temp <= 17.95*" etc.
 
 
-*Value*{: style="color: hotpink"} refers to the prediction of the target, i.e. the predicted amount of precipitation in mm, up to that point.
+*Value*{: style="color: blue"} refers to the prediction of the target, i.e. the predicted amount of precipitation in mm, up to that point.
 
-*MSE*{: style="color: hotpink"} refers to the mean-square error.
+*MSE*{: style="color: blue"} refers to the mean-square error.
 
 
 # Predictions
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 So, how do we use our tree for predictions ? Let's first predict the precipitation for a single test-input
@@ -372,7 +372,7 @@ Output:
 
 
 # Evaluation of test-predictions
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 Note that *y_pred* is the numpy array with our predictions while *y_test* is a pandas series object with the actual precipitations for the test-data. We compute the root-mean square error (i.e. sqrt(sum of the squares of the differences between  actual precipitations and predicted values))
 
@@ -416,7 +416,7 @@ plt.legend();
 
 
 Footnotes
-{: style="color: hotpink"}
+{: style="color: blue"}
 
 [^1]: "*Is the average temperature > 30 C". If yes, ask query_1, if not ask query_2...*" 
 

@@ -6,22 +6,22 @@ tags: [Linear algebra]
 ---
 
 # Prerequisites
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 We'll assume you that you have read [this introductory post](/2020/07/27/SVD.html) on singular value decomposition a.k.a SVD.
 
 # The theorem 
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 In this post, we'll get our hands dirty and examine how and why SVD works. But let's first recall what it is.
 
 > Let $$A$$ be an $$n \times m$$ real matrix. Then $$A = U\Sigma V^T$$ where 
- * $$U$$ is an $$n \times n$$ *orthogonal*{: style="color: hotpink"}[^1] matrix
+ * $$U$$ is an $$n \times n$$ *orthogonal*{: style="color: blue"}[^1] matrix
  * $$V$$ is an $$m \times m$$ orthogonal matrix
  * $$\Sigma$$ is an $$n\times m$$ matrix where every entry except the first $$r$$ diagonal entries is zero where $$r$$ is the rank of $$A$$.
- * Further the non-zero diagonal entries of $$\Sigma$$ are precisely the so-called *singular values*{: style="color: hotpink"}[^2] of $$A$$ arranged in descending order.
+ * Further the non-zero diagonal entries of $$\Sigma$$ are precisely the so-called *singular values*{: style="color: blue"}[^2] of $$A$$ arranged in descending order.
 {: title ="SVD"}
 
-We saw in the introductory post that the columns of $$V$$ (let's call them $$v_1, v_2, \ldots v_m$$) are mutually perpendicular unit vectors which form a basis of $$\mathbb{R}^m$$ (a.k.a an *orthonormal basis*{: style="color: hotpink"} of $$\mathbb{R}^m$$). 
+We saw in the introductory post that the columns of $$V$$ (let's call them $$v_1, v_2, \ldots v_m$$) are mutually perpendicular unit vectors which form a basis of $$\mathbb{R}^m$$ (a.k.a an *orthonormal basis*{: style="color: blue"} of $$\mathbb{R}^m$$). 
 
 
 Further $$\{A(v_i)\}$$ still remain perpendicular to each other in $$\mathbb{R}^n$$. The length of the vectors $$\{A(v_i)\}$$ are encoded by the diagonal entries of $$\Sigma$$. The unit vectors along $$\{A(v_i)\}$$ can be completed to an orthonormal basis of $$\mathbb{R}^n$$, which are precisely given by the columns of $$U$$. 
@@ -30,8 +30,8 @@ Further $$\{A(v_i)\}$$ still remain perpendicular to each other in $$\mathbb{R}^
 
 
 # A blackbox
-{: style="text-align: center; background-color: pink"}
-Before jumping to the proof, let's reveal our secret weapon, the *spectral theorem*{: style="color: hotpink"}. This theorem, applied to real matrices states the following:
+{: style="text-align: center; background-color: #ccd9ff"}
+Before jumping to the proof, let's reveal our secret weapon, the *spectral theorem*{: style="color: blue"}. This theorem, applied to real matrices states the following:
 
 > Let $$B$$ be an $$m\times m$$ real and symmetric matrix. Then there exists an orthonormal eigenbasis for $$B$$. 
 {: title ="spectral theorem"}
@@ -50,14 +50,14 @@ The spectral theorem assures us however that there is a much _nicer_ basis avail
 
 
 
-More precisely, we can find unit mutually perpendicular vectors $$w_1, w_2, \ldots, w_m$$ so that $$Q(w_i) = \lambda_i w_i$$ for some scalars $$\lambda_i$$. Of course these scalars are by definition the *eigen-values*{: style="color: hotpink"} of $$Q$$, or equivalently of $$B$$.
+More precisely, we can find unit mutually perpendicular vectors $$w_1, w_2, \ldots, w_m$$ so that $$Q(w_i) = \lambda_i w_i$$ for some scalars $$\lambda_i$$. Of course these scalars are by definition the *eigen-values*{: style="color: blue"} of $$Q$$, or equivalently of $$B$$.
 
 
 
 
 
 # A running example and a proof
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 > _If only I had the theorems! Then I should find the proofs easily enough_ - Riemann"
 
@@ -158,7 +158,7 @@ Thus $$Av_1, Av_2$$ are perpendicular to each other. As an exercise, using the f
 
 More generally, the same reasoning tells us the following:
 
-*If $$v_1, v_2$$ are perpendicular eigenvectors of $$B=A^TA$$ for eigenvalues $$\lambda_1, \lambda_2$$, then $$Av_1, Av_2$$ are still perpendicular and have lengths $$\sqrt{\lambda_1}, \sqrt{\lambda_2}$$.*{: style="color: hotpink"}
+*If $$v_1, v_2$$ are perpendicular eigenvectors of $$B=A^TA$$ for eigenvalues $$\lambda_1, \lambda_2$$, then $$Av_1, Av_2$$ are still perpendicular and have lengths $$\sqrt{\lambda_1}, \sqrt{\lambda_2}$$.*{: style="color: blue"}
 
 
 Thus, the orthonormal eigenbasis of $$B=A^TA$$ given by the spectral theorem is exactly $$V$$ in the SVD of $$A = U\Sigma V^T$$ !
@@ -166,7 +166,7 @@ Thus, the orthonormal eigenbasis of $$B=A^TA$$ given by the spectral theorem is 
 
 
 # Summary
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 Given an $$n\times m$$ matrix A, here are the steps to find the SVD of $$A$$.
@@ -213,7 +213,7 @@ $$
 
 
 Footnotes
-{: style="color: hotpink"}
+{: style="color: blue"}
 
 [^1]: A square matrix $$X$$ is _orthogonal_ iff $$X^TX = XX^T$$ is the identity matrix
 [^2]: The _singular values_ of an $$n\times m$$ matrix A are the square roots of the eigenvalues of $$A^TA$$ listed with their algebraic multiplicities. 

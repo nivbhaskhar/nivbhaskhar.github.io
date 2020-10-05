@@ -6,7 +6,7 @@ order: 3
 ---
 
 ### Publications
-{: style="text-align: center ; background-color: pink"}
+{: style="text-align: center ; background-color: #ccd9ff"}
 
 
 |Brauer _p_ dimension of complete discretely valued fields (_with Bastian Haase_)|2020|[Transactions AMS (373):3709-3732](https://www.ams.org/journals/tran/2020-373-05/S0002-9947-2020-08038-6/home.html) |[arXiv version](https://arxiv.org/abs/1611.01248)|
