@@ -183,7 +183,7 @@ This brings us to lesson number two. __Pay attention to missing/invalid input va
 &nbsp;
 
 # Ignoring NaNs
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 
 To find the mean and variance, we need to work around the NaN values that are present in our numpy array. Fortunately, there are in-built functions to do exactly that.

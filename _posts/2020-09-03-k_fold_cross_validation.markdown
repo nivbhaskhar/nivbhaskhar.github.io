@@ -167,7 +167,7 @@ tree_reg = DecisionTreeRegressor(max_depth=4)
 
 
 # Cross validation scores
-{: style="text-align: center; background-color: pink"}
+{: style="text-align: center; background-color: #ccd9ff"}
 
 The syntax for computing cross validation scores over $$k$$ folds is 
 
