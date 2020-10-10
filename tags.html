@@ -32,7 +32,7 @@ Clean up tags, remove duplicates
 List tags with posts associated with them
 {% endcomment %}
 {% for tag in tags %}
-	<h2 id="{{ tag | slugify }}" style="background-color: pink; text-align: center;">{{ tag }}</h2>
+	<h2 id="{{ tag | slugify }}" style="background-color: #ccd9ff; text-align: center;">{{ tag }}</h2>
 
 	 {% for post in site.posts %}
 		 {% if post.tags contains tag %}
