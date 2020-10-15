@@ -22,7 +22,7 @@ The First R is a Flask web application where readers can sign up, log in and loo
 The code for this project can be found at [https://github.com/nivbhaskhar/The_First_R](https://github.com/nivbhaskhar/The_First_R)
 
 # Some screenshots of the web-app 
-{: style="background-color: pink"}
+{: style="background-color: #ccd9ff"}
 
 
 
