@@ -6,16 +6,16 @@ date: 2020-07-16
 ---
 
 # What is UnPuzzled ?
-{: style="background-color: pink"}
+{: style="background-color: #ccd9ff"}
 It is a jigsaw puzzle solver using AI
 
 
 # Web-app
-{: style="background-color: pink"}
+{: style="background-color: #ccd9ff"}
 Check out a web-application based on one of the solvers at [https://unpuzzler.herokuapp.com](https://unpuzzler.herokuapp.com)
 
 # An overview
-{: style="background-color: pink"}
+{: style="background-color: #ccd9ff"}
 This project consists of two components :  _creation and solving of puzzles_ and _checking adjacency of puzzle pieces_.
 
 I construct a _puzzle generator_, which takes a given image and cuts it up into a rectangular grid of  uniform square puzzle pieces with each puzzle piece being of a specified dimension. It further randomly rotates each square piece by 0/90/180/270 degrees counterclockwise and shuffles up the pieces, thus creating a puzzle. 
@@ -29,13 +29,13 @@ I also give a web-application built using [Gradio](https://github.com/gradio-app
 
 
 # GitHub repository
-{: style="background-color: pink"}
+{: style="background-color: #ccd9ff"}
 The code for this project can be found at [https://github.com/nivbhaskhar/UnPuzzled](https://github.com/nivbhaskhar/UnPuzzled/)
 
 
 
 # Unpuzzling 
-{: style="background-color: pink"}
+{: style="background-color: #ccd9ff"}
 
 Here's an animation of the solver in action
 
@@ -43,7 +43,7 @@ Here's an animation of the solver in action
 
 
 # Results
-{: style="background-color: pink"}
+{: style="background-color: #ccd9ff"}
 
 
 I evaluated solvers based on three checking-adjacency models, namely _AdjacencyClassifier_NoML_ (a hand-engineered model), _FromScratch_ (a simple CNN) and _ResNetFT_ (a fine-tuned ResNet 18 model).
@@ -154,7 +154,7 @@ Both the _AdjacencyClassifier_NoML_ and the _ResNetFT_ solved 87.5 % of the puzz
 
 
 # A venn diagram to visualize the comparisons
-{: style="background-color: pink"}
+{: style="background-color: #ccd9ff"}
 
 
 ![Venn diagram](/assets/SolverComparisons_61_0.png){:class="img-responsive"} 
@@ -162,7 +162,7 @@ Both the _AdjacencyClassifier_NoML_ and the _ResNetFT_ solved 87.5 % of the puzz
 
 
 # Comments
-{: style="background-color: pink"}
+{: style="background-color: #ccd9ff"}
 
 
 I further visually investigated what the models did on puzzles they did not solve completely correctly. It turned out that the solvers were putting together several chunks of the puzzles correctly even if they were not placing the pieces in the correct positions in the puzzle board. Further, the solvers sometimes put back mostly correct but rotated versions of the images. The current evaluation classified all these puzzles as _unsolved_.
