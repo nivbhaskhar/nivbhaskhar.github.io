@@ -15,6 +15,8 @@ order : 4
 ### Previous courses @ USC
 {: style="text-align: center ; background-color: #ccd9ff"}
 
+|Statistical Inference and Data Analysis I | Math 307 | Fall 2020 | 
+| Theory of numbers | Math 430| Fall 2020|
 | Calculus 1 |    Math 125 (Sec 1)|	Spring 2020 |
 | Calculus 1 |    Math 125 (Sec 2)|	Spring 2020 |
 | Contemporary Precalculus |	Math 108 | Fall 2019 |
