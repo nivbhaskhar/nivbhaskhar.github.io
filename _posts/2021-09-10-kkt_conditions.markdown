@@ -29,7 +29,7 @@ Minimize $$f(x)$$ under the constraints $$x\in X$$ and $$g_i(x) \leq 0$$ for $$1
 In general, one would like to find optimal solutions to (A). However, let us flip the problem over instead and query the following: *What are some conditions that are necessary for a feasible $$x_0\in S$$ to be optimal ?*
 
 
-Let's rephrase what it means for $$x_0$$ to be optimal. Let $$B=\{x\in S:f(x)-f(x_0) < 0\}. Clearly $$x_0$$ is optimal exactly when $$B=\emptyset$$. The idea then is to express $$B$$ as an intersection $$F\cap G\cap X$$ where,
+Let's rephrase what it means for $$x_0$$ to be optimal. Let $$B=\{x\in S:f(x)-f(x_0) < 0\}$$. Clearly $$x_0$$ is optimal exactly when $$B=\emptyset$$. The idea then is to express $$B$$ as an intersection $$F\cap G\cap X$$ where,
 
 - $$G=\cap G_i$$ where $$G_i = \{x: g_i(x)\leq 0\}$$ captures one portion of the constraints
 - $$X$$ captures the other portion of the constraints
