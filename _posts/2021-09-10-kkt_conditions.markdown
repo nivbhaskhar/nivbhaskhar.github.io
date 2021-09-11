@@ -12,7 +12,7 @@ tags: [Optimization]
 {: class="sectiontitle" }
 
 Minimize $$f(x)$$ under the constraints $$x\in X$$ and $$g_i(x) \leq 0$$ for $$1\leq i\leq n$$, where
-- $$X\subset\mathbb{R}^n$$
+- $$X$$ is a subset of $$\mathbb{R}^n$$
 - $$f,g_i$$ are functions $$U\to\mathbb{R}$$ for some open set $$U\supset X$$
 
 # Feasible set, feasible solutions and optimal solutions
@@ -28,7 +28,9 @@ Minimize $$f(x)$$ under the constraints $$x\in X$$ and $$g_i(x) \leq 0$$ for $$1
 
 In general, one would like to find optimal solutions to (A). However, let us flip the problem over instead and query the following: *What are some conditions that are necessary for a feasible $$x_0\in S$$ to be optimal ?*
 
-**Equivalent conditions for optimality**: Let's rephrase what it means for $$x_0$$ to be optimal. Let $$B=\{x\in S|f(x)-f(x_0)< 0\}$$. Clearly $$x_0$$ is optimal exactly when $$B=\emptyset$$. The idea then is to express $$B$$ as an intersection $$F\cap G\cap X$$ where,
+Equivalent conditions for optimality
+
+Let's rephrase what it means for $$x_0$$ to be optimal. Let $$B=\{x\in S|f(x)-f(x_0)< 0\}$$. Clearly $$x_0$$ is optimal exactly when $$B=\emptyset$$. The idea then is to express $$B$$ as an intersection $$F\cap G\cap X$$ where,
 
 - $$G=\cap G_i$$ where $$G_i = \{x|g_i(x)\leq 0\}$$ captures one portion of the constraints
 - $$X$$ captures the other portion of the constraints
