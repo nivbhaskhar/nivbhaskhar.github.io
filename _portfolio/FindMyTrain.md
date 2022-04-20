@@ -12,7 +12,7 @@ It is a JavaScript visualization of the Los Angeles Metro Rail.
 
 # Web-app
 {: style="background-color: #ccd9ff"}
-Check out the visualization at [https://nivbhaskhar.github.io/find_my_train.html](https://nivbhaskhar.github.io/find_my_train.html)
+Check out the visualization at [https://nivbhaskhar.github.io/find_my_train.html](https://nivbhaskhar.github.io/find_my_train.html). Sadly, the LA metro API has changed recently, and the app needs to be updated.
 
 # An overview
 {: style="background-color: #ccd9ff"}
