@@ -8,12 +8,7 @@ date: 2020-06-17
 # An overview
 {: style="background-color: #ccd9ff"}
 
-I give a Python implementation of Blossoms algorithm to find maximum matching in *any* undirected graph. I also write down unit tests to test the various functions in the algorithm. Finally, I also give an interactive [web-application](https://maxmatcher.herokuapp.com) built using [Gradio](https://github.com/gradio-app/gradio) which is deployed on Heroku. This web-app outputs a maximum matching given the adjacency matrix of a graph.
-
-
-# Web-app
-{: style="background-color: #ccd9ff"}
-Check out the MaxMatcher web-application at [https://maxmatcher.herokuapp.com](https://maxmatcher.herokuapp.com)  
+I give a Python implementation of Blossoms algorithm to find maximum matching in *any* undirected graph. I also write down unit tests to test the various functions in the algorithm.
 
 
 # GitHub repository

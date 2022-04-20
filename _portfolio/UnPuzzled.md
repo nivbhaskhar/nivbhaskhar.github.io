@@ -10,10 +10,6 @@ date: 2020-07-16
 It is a jigsaw puzzle solver using AI
 
 
-# Web-app
-{: style="background-color: #ccd9ff"}
-Check out a web-application based on one of the solvers at [https://unpuzzler.herokuapp.com](https://unpuzzler.herokuapp.com)
-
 # An overview
 {: style="background-color: #ccd9ff"}
 This project consists of two components :  _creation and solving of puzzles_ and _checking adjacency of puzzle pieces_.
@@ -24,7 +20,7 @@ I construct several models (machine-learning based and non-machine learning base
 
 I design a _search algorithm_ which takes a puzzle board with the _top-left corner filled in_, searches for the _best_ pieces to fit into the board till the board is filled completely. The task of determining which pieces fit _better_ makes use of the _checking-adjacency models_. I create _solvers_, which integrate the models with the search algorithm. Finally, I evaluate and compare the performances of the solvers on a test-data set of puzzles which are constructed by the puzzle generator from the test-portion of the CUB-200 dataset split.
 
-I also give a web-application built using [Gradio](https://github.com/gradio-app/gradio) which simulates the puzzle-solving by the solver which is deployed on Heroku
+I used to have a web-application built using [Gradio](https://github.com/gradio-app/gradio) which simulated the puzzle-solving by the solver, deployed on Heroku. The files for the Heroku app can be found in the github repo still, though the app is now deleted.
 
 
 
