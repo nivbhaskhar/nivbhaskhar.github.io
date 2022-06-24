@@ -34,6 +34,8 @@ The code for this project can be found at [https://github.com/nivbhaskhar/FindMy
 
 # Web-app
 {: style="background-color: #ccd9ff"}
-Check out the visualization at [https://nivbhaskhar.github.io/find_my_train.html](https://nivbhaskhar.github.io/find_my_train.html). Sadly, the LA metro API has changed recently, and the app needs to be updated.
+Check out the visualization at [https://nivbhaskhar.github.io/find_my_train.html](https://nivbhaskhar.github.io/find_my_train.html). 
+
+*Sadly, the LA metro API has changed recently, and the app needs to be updated.*
 
 
