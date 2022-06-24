@@ -9,10 +9,12 @@ date: 2020-08-24
 {: style="background-color: #ccd9ff"}
 It is a JavaScript visualization of the Los Angeles Metro Rail.
 
-
-# Web-app
+# Screenshot
 {: style="background-color: #ccd9ff"}
-Check out the visualization at [https://nivbhaskhar.github.io/find_my_train.html](https://nivbhaskhar.github.io/find_my_train.html). Sadly, the LA metro API has changed recently, and the app needs to be updated.
+
+Here's a screenshot from the web-application.
+
+![Screenshot](/assets/train2.png){:class="img-responsive"}{: style="height:200; width:100; display: block; margin-left: auto; margin-right: auto;"} 
 
 # An overview
 {: style="background-color: #ccd9ff"}
@@ -28,13 +30,10 @@ The code for this project can be found at [https://github.com/nivbhaskhar/FindMy
 
 
 
-# Screenshot
+
+
+# Web-app
 {: style="background-color: #ccd9ff"}
-
-Here's a screenshot from the web-application.
-
-![Screenshot](/assets/train2.png){:class="img-responsive"}{: style="height:200; width:100; display: block; margin-left: auto; margin-right: auto;"} 
-
-
+Check out the visualization at [https://nivbhaskhar.github.io/find_my_train.html](https://nivbhaskhar.github.io/find_my_train.html). Sadly, the LA metro API has changed recently, and the app needs to be updated.
 
 
