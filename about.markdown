@@ -14,7 +14,7 @@ Hello there! My name is Nivedita Bhaskhar and I am a Machine Learning Engineer.
 
 
 
-I'm interested in mathematics, machine learning and quantum computing. In my past avatar as a mathematician, I worked with mathematical structures called _algebraic groups_. To know more about my work, check out my [research](/research_math) and [portfolio](/portfolio) pages. I also have an expository [tech-blog](/blog) that I try to update, when time permits.
+I'm interested in mathematics, machine learning and quantum computing. In my past avatar as a pure mathematician, I worked with mathematical structures called _algebraic groups_. To know more about my work, check out my [research](/research_math) and [portfolio](/portfolio) pages. I also have an expository [tech-blog](/blog) that I try to update, when time permits.
 {: style="text-align: justify"}
 
 
